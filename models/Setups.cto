@@ -1,0 +1,7 @@
+namespace net.nus.com.cs6203.setups
+
+transaction SetupDemo {
+}
+
+transaction RemoveAll {
+}

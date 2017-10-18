@@ -5,7 +5,7 @@ rule Default {
     description: "Allow all participants access to all resources"
     participant: "ANY"
     operation: ALL
-    resource: "net.biz.digitalPropertyNetwork.*"
+    resource: "net.nus.com.cs6203.*"
     action: ALLOW
 }
 

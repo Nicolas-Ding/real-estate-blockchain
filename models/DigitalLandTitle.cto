@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-namespace net.biz.digitalPropertyNetwork
+namespace net.nus.com.cs6203
 
 asset LandTitle identified by titleId {
   o String   titleId
@@ -24,6 +24,7 @@ asset LandTitle identified by titleId {
 
 asset SalesAgreement identified by salesId {
   o String    salesId
+  o Integer   price
   --> Person    buyer
   --> Person    seller
   --> LandTitle title
@@ -37,9 +38,13 @@ participant Person identified by personId {
 
 
 transaction RegisterPropertyForSale {
-  --> Person seller
   --> LandTitle title
   o Integer price
+}
+
+transaction BuyProperty {
+  --> Person buyer
+  --> LandTitle title
 }
 
 transaction ValidateSaleAgreement {
